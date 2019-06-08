@@ -24,12 +24,18 @@ Functional Component Definition with Implicit Return:
 **Class Component Definition:**
 ```jsx
 class MyComponent extends React.Component {
-  // constructor() { ... }
+  constructor(props) {
+    super(props);
+    this.state = { ... };
+  }
+  
+  // Event Handler Functions
   
   render() {
     return (
       // JSX   {this.props.propName}
       // JSX   {this.state.stateName}
+      // JSX   onClick={this.eventHandlerFunc}
     );
   }
 }
@@ -94,7 +100,7 @@ MyComponent.defaultProps = {userName: "John"};
 ```
 
 
-#### Using props requires two steps:
+#### Using props Requires Two Steps:
 
 1. Define the `props` in a component's JSX tag (where it is being used).
 2. Enable the use of `props` in a component (define the `props` argument in the function component's definition).
@@ -121,7 +127,7 @@ class Counter extends React.Component {
   constructor() {
     super()
     this.state = {
-      // JSX
+      // JavaScript Object
     };
   }
   // ... ...
@@ -132,7 +138,7 @@ class Counter extends React.Component {
 ```jsx
 class Counter extends React.Component {
   state = {
-    // JSX
+    // JavaScript Object
   };
   // ... ... 
 }  
@@ -202,9 +208,15 @@ class MyComponent extends React.Component {
 }
 ```
 
-**3)** Define the event handler function as an arrow function **[PREFERRED METHOD]**
+**3)** Bind the event handler function inside the constructor. **[PREFERRED METHOD]**
 ```jsx
 class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    
+    this.eventHandlerFunc = this.eventHandlerFunc.bind(this);
+  }
+  
   eventHandlerFunc() {
     this.setState( {
       statePropName: this.state.statePropName + 1
@@ -240,12 +252,13 @@ eventHandlerFunc = () => {
 * The callback function (an arrow function) receives the previous `state` as it's first argument and the `props` (at the time the update is applied as an optional second argument).
 
 * The only thing that changes over time in React is `state`. 
-A change in `state` results in changes to the UI.
-Changes to the UI result in changes to the data.
+  A change in `state` results in changes to the UI.
+  Changes to the UI result in changes to the data.
 
 ___
 
 ## Remove Items From state
+
 * To remove items from a `state` we'll initialize a `state` in the `<App />` component, then create and wire up an event handler that removes an item when an event is triggered, such as a click event.
 
 * The component responsible for rendering the desired component will own and maintain that component's `state`. In this case, it's the `<App />` component.
