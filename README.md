@@ -166,12 +166,14 @@ this.setState({
 
 * You pass React events as a JSX expression using curly brackets, `{ }`, and the event handler function that will get called when the specified event (e.g. `onClick`) is triggered.
 
-* `state` is **never** modified directly! The only way React allows you to update a component's state is by using it's built-in `setState()` method. This is done inside the event handler functions.
+* `state` is **never** modified directly! 
+
+  The only way React allows you to update a component's state is by using it's built-in `setState()` method. This is done inside the event handler functions.
 
 ___
 
 ## Binding the thisContext In React
-* When you create a class component that extends from `React.Component`, any custom methods you create are not bound to the class component you just created. You must bind custom methods so that `this` refers to your newly created class component.
+When you create a class component that extends from `React.Component`, any custom methods you create are not bound to the class component you just created. You must bind custom methods so that `this` refers to your newly created class component.
 
 There are several ways to accomplish this task:
 
@@ -239,6 +241,7 @@ ___
 * When updating `state` based on a previous `state`, do not rely on `this.state.statePropName` to calculate the next `state` because it may not be accurate.
 
 **To Fix This Issue:**
+
 React's `setState()` method can also take a callback function as an argument instead of an object. This callback function can produce `state` based on a previous `state` in a more reliable form.
 
 ```jsx
