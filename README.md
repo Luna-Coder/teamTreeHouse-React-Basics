@@ -35,7 +35,7 @@ class MyComponent extends React.Component {
 }
 
 ```
-* In `constructor()` we define the initial `state` that the component will render to (mount).
+* In `constructor()` we define the initial `state` that the component will render, (mount), to.
 
 * The `render()` function in a class component is a function of both `props` and `state`.
 
@@ -46,9 +46,9 @@ class MyComponent extends React.Component {
 **Note:**
 * React components return React elements.
 
-* React - The React top-level API.
-* React DOM - Adds DOM-specific methods.
-* Babel - A JavaScript compiler that lets us use ES6+ in older browsers.
+* **React** - The React top-level API.
+* **React DOM** - Adds DOM-specific methods.
+* **Babel** - A JavaScript compiler that lets us use ES6+ in older browsers.
 
 * Functional Components are also `state`-less functional componets.
 
@@ -61,10 +61,10 @@ class MyComponent extends React.Component {
 * Create-React-Application is a development server that uses WebPack to compile React, JSX, and ES6, and auto-prefixes CSS files.
 
 * Use curly brackets, `{ }`, when setting numeric values in `props`.
-```jsx
-// Example
-score={23}
-```
+  ```jsx
+  // Example
+  score={23}
+  ```
 
 ___
 
