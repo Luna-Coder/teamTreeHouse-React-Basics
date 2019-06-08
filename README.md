@@ -251,9 +251,11 @@ eventHandlerFunc = () => {
 
 * The callback function (an arrow function) receives the previous `state` as it's first argument and the `props` (at the time the update is applied as an optional second argument).
 
-* The only thing that changes over time in React is `state`. \n
-    A change in `state` results in changes to the UI. /n
-    Changes to the UI result in changes to the data.
+* The only thing that changes over time in React is `state`.
+
+  A change in `state` results in changes to the UI.
+
+  Changes to the UI result in changes to the data.
 
 ___
 
