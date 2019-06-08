@@ -238,10 +238,9 @@ class MyComponent extends React.Component {
 ___
 
 ## Change state Based On Previous state
-* When updating `state` based on a previous `state`, do not rely on `this.state.statePropName` to calculate the next `state` because it may not be accurate.
+When updating `state` based on a previous `state`, do not rely on `this.state.statePropName` to calculate the next `state` because it may not be accurate.
 
 **To Fix This Issue:**
-
 React's `setState()` method can also take a callback function as an argument instead of an object. This callback function can produce `state` based on a previous `state` in a more reliable form.
 
 ```jsx
