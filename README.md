@@ -64,7 +64,7 @@ class MyComponent extends React.Component {
 
 * React elements are _immutable_.
 
-* Create-React-Application is a development server that uses WebPack to compile React, JSX, and ES6, and auto-prefixes CSS files.
+* **Create-React-Application** is a development server that uses WebPack to compile React, JSX, and ES6, and auto-prefixes CSS files.
 
 * Use curly brackets, `{ }`, when setting numeric values in `props`.
   ```jsx
@@ -103,6 +103,7 @@ MyComponent.defaultProps = {userName: "John"};
 #### Using props Requires Two Steps:
 
 1. Define the `props` in a component's JSX tag (where it is being used).
+
 2. Enable the use of `props` in a component (define the `props` argument in the function component's definition).
 
 
@@ -149,6 +150,7 @@ ___
 ## Update A Component's state
 
 Call `setState()` within your component class passing it an object with key-value pairs. The keys are your `state` properties and the values are the updated `state` data.
+
 ```jsx
 this.setState({
   name: "Erik",
@@ -184,7 +186,7 @@ class MyComponent extends React.Component {
   
   render() {
     return (
-      <button onClick={ this.eventHandlerFunc.bind(this) }>CLICK ME</button>
+      <button onClick={this.eventHandlerFunc.bind(this)}>CLICK ME</button>
     );
   }
 }
@@ -225,7 +227,7 @@ class MyComponent extends React.Component {
   
   render() {
     return (
-      <button onClick={ this.eventHandlerFunc }>CLICK ME</button>
+      <button onClick={this.eventHandlerFunc}> CLICK ME! </button>
     );
   }
 }
@@ -249,7 +251,7 @@ eventHandlerFunc = () => {
 }
 ```
 
-* The callback function (an arrow function) receives the previous `state` as it's first argument and the `props` (at the time the update is applied as an optional second argument).
+* The callback function (an arrow function) receives the previous `state` as it's first argument, and the `props` (at the time the update is applied) as an optional second argument.
 
 * The only thing that changes over time in React is `state`.
 
