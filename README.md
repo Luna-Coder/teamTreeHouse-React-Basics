@@ -273,7 +273,7 @@ ___
 
 * The `<App />` component **must** be a stateful component for all this to work!
 
-* To remove items from `state` wrie the removal function inside the parent component, our example `<App />`, and use the `setState()` method to update the `state` based on `prevState` with the `filter()` method.
+* To remove items from `state` write the removal function inside the parent component, our example `<App />`, and use the `setState()` method to update the `state` based on `prevState` with the `filter()` method.
 
 
 
