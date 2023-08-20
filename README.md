@@ -29,13 +29,17 @@ class MyComponent extends React.Component {
     this.state = { ... };
   }
   
-  // Event Handler Functions
+  // Event Handler Functions & JS Code
+  // onClick={this.eventHandlerFunc}
+  // const sum(a, b) { ... }
   
   render() {
+    // JS
+
     return (
       // JSX   {this.props.propName}
       // JSX   {this.state.stateName}
-      // JSX   onClick={this.eventHandlerFunc}
+      // JSX & COMPONENTS
     );
   }
 }
